@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Product</title>
+    <!-- javascript -->
+    <script src="main.js" type="text/javascript"></script>
+     <!-- styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload= "updateProductPage(); showCartSize()">
+    <div class = "header">
+        <img id = "logo" src="media/logo.png" height="140" alt="Logo">
+        <nav>
+            <a class="main-menu" href="./index.html">Home</a>
+            <a class="main-menu" href="./about.html">About</a>
+            <a class="main-menu" href="./products.html">Products</a>
+            <a class="main-menu" href="./contact.html">Contact</a>
+        </nav>
+        <nav class="right-aligned">
+            <a id="cart" href="./cart.html">
+
+            </a>
+            <a class="profile" href="./cart.html">
+
+            </a>
+            <div class="profile_dropdown">
+                <img src="media/profile.png" width='80' alt="Profile Icon">
+                <div class="profile_links">
+                    <a href="./login.html">Log In</a>
+                    <a href="./signup.html">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="page">
+        <div id="product_image">
+        </div>
+        <div id="product_side">
+            <div id="product_info">
+            </div>
+            <form>
+                <div id="subscription_options">
+                    <input type="radio" id="subscribe" name="purchase_type" onselect="showSubscriptionOptions()" required>
+                    <label for="subscribe">Subscribe & Save <span>Save 20%!</span></label><br>
+                </div>
+                <input type="radio" id="one_time" name="purchase_type" required checked>
+                <label for="one_time">One Time Purchase</label><br><br>
+                <input type="submit" value="Add to Cart" onclick="addToCart(document.getElementById('subscribe').checked)">
+            </form>
+
+        </div>
+
+    </div>
+</body>
+</html>
